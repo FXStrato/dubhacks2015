@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ghost</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <section id="welcome" class="section">
+      <div id="title" class="container">
+        <div class="row">
+          <div class="text-center col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-lg-6">
+            <h1>Welcome to Ghost</h1>
+            <button id="start" class="btn btn-primary" type="button">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="chat_view" class="section">
+      <div id="title_section" class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button id="exit" class="btn btn-danger pull-left" type="button">Exit</button>
+            <h3 id="room-name" class="clip">Chat Room Name
+            </h3>
+          </div>
+        </div>
+      </div>
+        <div id="chat" class="container pre-scrollable">
+          <div class="row">
+            <div id="chatBox" >
+            </div>
+          </div>
+        </div>
+      <div id="message_section" class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div id="messageForm" class="form-inline" id="messageform">
+              <div class="input-group full-width">
+                <input type="text" autocomplete="off" class="form-control" placeholder="Type a message ..." id="m">
+                <span class="addon-btn input-group-btn">
+                  <button id="send" class="btn btn-default" type="button">Send</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--<section id="end" class="section">
+
+    </section>
+    -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+    <script src="assets/js/core.js"></script>
+    <script src="assets/js/core-min.js"></script>
+    <script src="assets/js/rabbit.js"></script>
+    <script src="assets/js/aes.js"></script>
+    <script src="assets/js/enc-base64.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      ZeroClipboard.config( { swfPath: "assets/ZeroClipboard.swf" } );
+      var clt = new ZeroClipboard( $('.clip') );
+
+      clt.on( 'ready', function(event) {
+
+        clt.on( 'copy', function(event) {
+          event.clipboardData.setData('text/plain', event.target.innerHTML);
+        } );
+
+        clt.on( 'aftercopy', function(event) {
+          //console.log('Copied text to clipboard: ' + event.data['text/plain']);
+        } );
+      } );
+
+      clt.on( 'error', function(event) {
+        // console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+        ZeroClipboard.destroy();
+      } );
+    </script>
+
+  </body>
+</html>

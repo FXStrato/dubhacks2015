@@ -1,0 +1,163 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	position: relative;
+}
+
+.section {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#title_section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	text-align: center;
+	background-color: white;
+}
+
+#chat_section {
+	position: relative;
+}
+#chat {
+	min-height: 100%;
+	background-color: white;
+	padding-top: 65px;
+	padding-bottom: 65px;
+	z-index: 1;
+
+	height: 100%;
+	padding-bottom: 75px;
+
+	overflow: scroll;
+
+}
+#message_section {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+	background-color: white;
+}
+
+#chat_view {
+	display: none;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.addon-btn {
+	width: 58px !important;
+}
+
+.message-right {
+	text-align: right;
+}
+
+.message {
+	margin-top: 15px;
+	display: flex;
+}
+
+.msg {
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.msg-other {
+	background-color: rgb(237, 236, 236);
+	color: black;
+}
+
+.msg-primary {
+	background-color: rgb(0, 132, 255);
+	color: white;
+}
+.modal-title {
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+	.modal-dialog{
+    	width:200px;
+	}
+}
+#title {
+	position: absolute;
+    top:40%;
+    left:0;
+    right:0;
+}
+
+#exit {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.bubble{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+}
+
+.bubble::before {
+    background-color: #F2F2F2;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform:             rotate( 29deg ) skew( -35deg );
+        -moz-transform:    rotate( 29deg ) skew( -35deg );
+        -ms-transform:     rotate( 29deg ) skew( -35deg );
+        -o-transform:      rotate( 29deg ) skew( -35deg );
+        -webkit-transform: rotate( 29deg ) skew( -35deg );
+    width:  20px;
+}
+
+
+.me {
+    float: left;   
+    margin: 5px 45px 5px 20px;   
+    clear: both;      
+}
+
+.me::before {
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    left: -9px;           
+}
+
+.you {
+    float: right;    
+    margin: 5px 20px 5px 45px;  
+    clear: both;
+    background-color: #008AE6;
+    color: white;       
+}
+
+.you::before {
+    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+    right: -9px;    
+}
+
